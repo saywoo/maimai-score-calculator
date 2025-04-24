@@ -8,7 +8,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>maimai 스코어 계산기</h1>
+      <div>
+        <h1>마이마이 스코어 계산기</h1>
+      </div>
       <ScoreInputTable valArr={valArr} setValArr={setValArr} />
       <CalculateScore valArr={valArr} />
     </div>

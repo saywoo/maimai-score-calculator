@@ -6,6 +6,10 @@ function ScoreInputBox({ id, valArr, setValArr }) {
   const [value, setValue] = useState(0);
 
   const saveValue = (event) => {
+    if (event.target.value.length > 4) {
+      // 입력 받은 숫자가 4자리를 넘어가면 slice
+      event.target.value = event.target.value.slice(0, 4);
+    }
     const temp = event.target.value;
     if (temp == null) temp = "0";
     const num = Number(temp);
@@ -17,7 +21,14 @@ function ScoreInputBox({ id, valArr, setValArr }) {
     setValArr(nextValArr);
   };
 
-  return <input type="number" value={value} onChange={saveValue}></input>;
+  return (
+    <input
+      type="number"
+      maxlength="4"
+      value={value}
+      onChange={saveValue}
+    ></input>
+  );
 }
 
 function ScoreInputTable({ valArr, setValArr }) {

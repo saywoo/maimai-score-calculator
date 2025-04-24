@@ -52,8 +52,7 @@ export default function CalculateScore({ valArr }) {
   }
   return (
     <>
-      <div className="resultLayout">
-        <div className="leftEmpty"></div>
+      <div className="container">
         <div className="breakSlider">
           <p>2프레임 break 개수</p>
           <p>
@@ -75,6 +74,8 @@ export default function CalculateScore({ valArr }) {
             계산
           </button>
         </div>
+      </div>
+      <div className="container">
         <div className="resultText">
           <p>{percent + "%"}</p>
           <br></br>
@@ -82,7 +83,6 @@ export default function CalculateScore({ valArr }) {
             DX score : {dxScore} / {totalDxScore}
           </p>
         </div>
-        <div className="rightEmpty"></div>
       </div>
     </>
   );
