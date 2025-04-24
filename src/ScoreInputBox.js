@@ -22,7 +22,7 @@ function ScoreInputBox({ id, valArr, setValArr }) {
 
 function ScoreInputTable({ valArr, setValArr }) {
   return (
-    <>
+    <div className="container">
       <table>
         <thead>
           <tr className="topRow">
@@ -137,7 +137,7 @@ function ScoreInputTable({ valArr, setValArr }) {
           </tr>
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 
