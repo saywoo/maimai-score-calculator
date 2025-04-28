@@ -1,15 +1,31 @@
 .container {
   display: flex;
+  margin-bottom: 15px;
 }
 
 table {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  height: 10px;
   border-collapse: collapse;
   border-style: hidden;
   box-shadow: 0 0 0 0.3rem #50a5f5;
   border-radius: 0.3rem;
+}
+table:not(.addtionalScoreTable) {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.addtionalScoreTable {
+  margin-left: -0.7rem;
+}
+.emptyCol {
+  background-color: #eaeaea;
+}
+.breakPerfectCol {
+  background-color: #fe9d0235;
+}
+.breakGreatCol {
+  background-color: #f75ea335;
 }
 
 tr,
@@ -47,9 +63,11 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 767px) {
   table {
-    width: 400px;
     box-shadow: 0 0 0 0.2rem #50a5f5;
     border-radius: 0.2rem;
+  }
+  table:not(.addtionalScoreTable) {
+    width: 400px;
   }
   tr,
   td,
@@ -73,12 +91,17 @@ input::-webkit-inner-spin-button {
     padding-left: 5px;
     padding-right: 5px;
   }
+  .container {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (max-width: 500px) {
   table {
-    width: 300px;
     box-shadow: 0 0 0 0.2rem #50a5f5;
     border-radius: 0.2rem;
+  }
+  table:not(.addtionalScoreTable) {
+    width: 300px;
   }
   tr,
   td,
@@ -103,6 +126,9 @@ input::-webkit-inner-spin-button {
   .noteName {
     padding-left: 5px;
     padding-right: 5px;
+  }
+  .container {
+    margin-bottom: 6px;
   }
 }
 

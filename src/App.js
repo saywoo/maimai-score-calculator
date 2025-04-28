@@ -4,7 +4,7 @@ import CalculateScore from "./CalculateScore";
 import ScoreInputTable from "./ScoreInputBox";
 
 function App() {
-  const [valArr, setValArr] = useState(Array(25).fill(0));
+  const [valArr, setValArr] = useState(Array(30).fill(0));
 
   return (
     <div className="App">
